@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+li{
+    list-style-type: none;
+}
+header .titel{
+    background-color: blue;
+    color: azure;
+    text-align: center;
+    padding: 20px;
+}
+header .titel h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+header .titel p{
+    font-size: 22px;
+    line-height: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 100px ;
+}
+.setting .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* bottom: 0; */
+    transform: translateY(30px);
+    background-color: cadetblue;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transition: top 0.2 ease;
+
+    /* شما اینجا دوراه دارید برای اینکه:
+    ایکن ستینگ شما با اسکرول  بالا و پایین بره یا اینکهtop:0,bottom:0بهش بدید و حالت fixedهم بهش بدید تا با هر بار اسکرول بالا و پایین بره */
+    /* واینکه در حالت css باید position:fiex باشه اما در حالت java باید position:absolute باشه */
+}
+.icon.linear{
+    left: 200px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+.setting .icon svg{
+    font-size: 30px;
+    animation: fa-spin 2s infinite linear;
+    -webkit-animation: fa-spin 2s infinite linear;
+}
+.sidbar.active{
+    left: 0px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+.sidbar{
+    position: fixed;
+    background-color: blue;
+    left: -300px;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    display: flex;
+    align-items:center ;
+    justify-content: start;
+    flex-direction: column;
+    color: aliceblue;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    /*شماposition: abslout گذاشتی که تا نصفه ازتفاع میکیره و از والدش ارثبری میکنه پس درستش اینه یه پوزیشن fixed بدی */;
+}
+.sidbar .box_img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    overflow: hidden;
+}
+.sidbar .box_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sidbar ul{
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+}
+.sidbar ul li{
+    display: block;
+    padding: 20px;
+    font-size: 25px;
+    font-style: oblique;
+    border-top: 2px solid rgb(139, 139, 139);
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+}
+.sidbar ul li:last-child{
+    border-bottom: 2px solid rgb(139, 139, 139);
+}
+.sidbar ul li:hover{
+    background-color: rgba(6, 6, 122,0.2);
+}
+.text_body{
+    padding: 50px;
+}
+.text_body p{
+    padding: 20px;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: justify;
+}
